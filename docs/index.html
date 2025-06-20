@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <title>Enclose</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" type="text/css" href="main.js">
+    <link rel="stylesheet" type="text/css" href="style.css">  
+  </head>
+
+  <body>
+
+    <!-- NAV BAR -->
+    <div class="bg-black text-white w-full p-2 flex fixed z-10 text-xs md:text-base">
+      <div class="flex-1">
+        <a href="#home" class="block text-center py-2 px-4 hover:bg-gray-300 hover:text-black rounded">HOME</a>
+      </div>
+      <div class="flex-1">
+        <a href="#services" class=" block text-center w-full py-2 px-4 hover:bg-gray-300 hover:text-black rounded">SERVICES</a>
+      </div>
+      <div class="flex-1">
+        <a href="#book" class=" block text-center w-full py-2 px-4 hover:bg-gray-300 hover:text-black rounded">BOOK A CALL</a>
+      </div>
+      <div class="flex-1">
+        <a href="#contact" class=" block text-center w-full py-2 px-4 hover:bg-gray-300 hover:text-black rounded">CONTACT US</a>
+      </div>
+    </div> 
+
+    <!-- LOGO AREA -->
+    <div class="bg-gradient h-3/4">
+      <header class="bg-no-repeat logo w-full h-full scale-75 mx-auto bg-center md:scale-150 sm:scale-100" id="home"></header>
+    </div>
+
+    <!-- PAGE COLORS -->
+    <div class="bg-purple-50 text-xl mx-auto">
+
+      <!-- Menu -->
+      <div class="container mx-auto text-center" style="max-width:700px" id="menu">
+        <p class="text-center py-7"><span class="bg-black text-white p-2 tracking-[.24em]">IS NOT TEAMING WITH AI KILLING YOUR BUSINESS?</span></p>
+        <p class="text-gray-700">The use of AI increases as we speak. High ranking professionals and business owners continue using AI to achieve their goals and grow their businesses</p> 
+        <p class="text-gray-700">In this race towards sucess, not having AI on your team can leave you far behind the rest</p>   
+        <p class="text-gray-700">EnClose tries to minimize this gap between those who use AI and those who have no idea what it's about</p>     
+      </div>
+
+      <!-- Services Area -->
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SERVICES</span></h5>
+
+        <div class="w3-row w3-center w3-card w3-padding">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+            <div class="w3-col s6 tablink">CONSULTATION</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+            <div class="w3-col s6 tablink">EDUCATION</div>
+          </a>
+        </div>
+          <div id="consultation" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Consultation</h5>
+            <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+          </div>
+
+          <div id="education" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Education>/h5>
+            <p class="w3-text-grey">Regular coffee 2.50</p><br>
+          </div>
+      </div>
+
+      <!-- Contact/Area Container -->
+      <div class="w3-container" id="contact" style="padding-bottom:32px;">
+        <div class="w3-content" style="max-width:700px">
+          <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT</span></h5>
+          <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+          <p><span class="w3-tag">FYI!</span> When you book an initial call, we <b>don't charge any money!</b> That is to get to know more about you and your requirments!</p>
+          <form action="/action_page.php" target="_blank">
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Company Name" required name="Company Name"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+            <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+          </form>
+        </div>
+      </div>
+
+    <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+    </footer>
+
+  </body>
+</html>
