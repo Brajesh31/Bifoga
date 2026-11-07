@@ -48,4 +48,4 @@ See [docs/architecture.md](docs/architecture.md) and [docs/troubleshooting.md](d
 
 MIT licensed. See [LICENSE](LICENSE).
 
-Last updated: 2026-11-07 14:45 UTC
+Last updated: 2026-11-07 19:11 UTC
