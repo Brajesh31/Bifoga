@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant V as Visitor
+    participant B as Browser
+    participant H as Static Host
+    V->>B: Open website URL
+    B->>H: Request HTML document
+    H-->>B: Return docs/index.html
+    B->>H: Request docs/style.css and referenced assets
+    H-->>B: Return static assets
+    B->>B: Parse, style and render page
+    B->>B: Execute browser JavaScript when invoked
+    B-->>V: Display interactive page
