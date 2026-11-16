@@ -1,0 +1,11 @@
+flowchart TD
+    Dev[Maintainer changes source] --> Review[Review and static checks]
+    Review --> Build{Tailwind source changed?}
+    Build -->|Yes| CSS[Generate docs/style.css]
+    Build -->|No| Artifact[Review docs/ artifact]
+    CSS --> Artifact
+    Artifact --> Host[Configured static host]
+    Host --> HTTPS[Serve site over HTTPS]
+    HTTPS --> Verify[Post-deployment smoke test]
+    Verify -->|Failure| Rollback[Restore last known-good artifact]
+    Verify -->|Success| Live([Release verified])
