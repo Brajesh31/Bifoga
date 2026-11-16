@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "🔐 Report a security vulnerability"
+    url: https://github.com/Brajesh31/Bifoga/security/advisories/new
+    about: "Use the private security advisory process. Do not publish vulnerability details in a public issue."
+  - name: "💬 General support"
+    url: https://github.com/Brajesh31/Bifoga/issues
+    about: "Use issues for public project questions that are not security reports."
