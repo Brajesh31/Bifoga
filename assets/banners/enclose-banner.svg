@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">EnClose, AI Consultation and Education</title>
+  <desc id="desc">A dark purple gradient banner with connected abstract nodes and the EnClose project title.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090712"/>
+      <stop offset=".55" stop-color="#21113f"/>
+      <stop offset="1" stop-color="#3b1762"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#67e8f9"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="1050" cy="120" r="260" fill="url(#glow)"/>
+  <g fill="none" stroke="url(#accent)" stroke-opacity=".55" stroke-width="2">
+    <path d="M830 74 L970 132 L1110 70 L1200 150 L1080 255 L930 235 L830 74"/>
+    <path d="M970 132 L930 235 M1110 70 L1080 255 M1200 150 L1080 255"/>
+    <path d="M760 180 L830 74 M760 180 L930 235"/>
+  </g>
+  <g fill="#c4b5fd">
+    <circle cx="830" cy="74" r="7"/><circle cx="970" cy="132" r="9"/>
+    <circle cx="1110" cy="70" r="6"/><circle cx="1200" cy="150" r="8"/>
+    <circle cx="1080" cy="255" r="7"/><circle cx="930" cy="235" r="6"/>
+    <circle cx="760" cy="180" r="5"/>
+  </g>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="86" y="145" fill="#ffffff" font-size="70" font-weight="750" letter-spacing="-2">EnClose</text>
+    <rect x="90" y="172" width="92" height="5" rx="3" fill="url(#accent)"/>
+    <text x="88" y="225" fill="#e9ddff" font-size="27" font-weight="500">AI Consultation &amp; Education</text>
+    <text x="90" y="275" fill="#c4b5fd" font-size="17" letter-spacing="2">A STATIC LANDING PAGE PROJECT</text>
+  </g>
+</svg>
