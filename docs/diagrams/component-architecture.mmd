@@ -1,0 +1,20 @@
+flowchart TB
+    subgraph Browser["Visitor browser"]
+        HTML[HTML page]
+        CSS[Compiled stylesheet]
+        JS[Vanilla JavaScript helper]
+        Logo[Logo image]
+        DOM[Rendered DOM]
+        HTML --> DOM
+        CSS --> DOM
+        JS --> DOM
+        Logo --> DOM
+    end
+    subgraph Delivery["Static delivery"]
+        Host[Static web host]
+    end
+    Host --> HTML
+    Host --> CSS
+    Host --> JS
+    Host --> Logo
+    Form[Contact form markup] -.-> Missing[No form service in repository]
