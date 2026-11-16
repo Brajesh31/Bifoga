@@ -1,0 +1,10 @@
+flowchart LR
+    UI[Browser form] -->|HTTPS only| API[Future server endpoint]
+    API --> Validate[Input validation]
+    Validate --> Abuse[Rate limiting and spam controls]
+    Abuse --> Service[Approved processing service]
+    Service --> Result[Structured result]
+    Result --> UI
+    Secrets[Server-side secrets] --> API
+    Store[(Optional approved data store)] -.-> Service
+    Note[No API, service, secrets store or database is implemented in current repository]
