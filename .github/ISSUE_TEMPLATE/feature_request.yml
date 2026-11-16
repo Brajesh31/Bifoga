@@ -1,0 +1,44 @@
+name: "✨ Feature request"
+description: Suggest a useful improvement grounded in a visitor or maintainer need.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What user or maintainer problem exists today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Explain the smallest useful implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Main impact area
+      options:
+        - Content and navigation
+        - Accessibility
+        - Responsive design
+        - Performance
+        - Developer experience
+        - Backend or external integration
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Considerations
+      options:
+        - label: I have considered accessibility and mobile behavior.
+        - label: I have considered privacy/security implications if data is collected.
