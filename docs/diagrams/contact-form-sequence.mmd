@@ -1,0 +1,14 @@
+sequenceDiagram
+    actor Visitor
+    participant Browser
+    participant Form as Static contact form
+    participant Handler as Future form handler
+    Visitor->>Browser: Enter contact values
+    Browser->>Form: Submit
+    Form-->>Browser: Current action points to placeholder path
+    Note over Browser,Handler: No handler is included in the current repository
+    opt Future integration
+        Browser->>Handler: HTTPS request
+        Handler->>Handler: Validate and apply abuse controls
+        Handler-->>Browser: Explicit success or error response
+    end
