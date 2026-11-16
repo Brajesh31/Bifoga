@@ -2,6 +2,12 @@
 
 <div align="center">
 
+![EnClose project banner](assets/banners/enclose-banner.svg)
+
+</div>
+
+<div align="center">
+
 **A static marketing website concept for AI consultation and education.**
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
@@ -140,7 +146,8 @@ flowchart TD
 | [Installation](docs/installation.md) | Node/npm setup and preview |
 | [Configuration](docs/configuration.md) | Tailwind and asset configuration |
 | [Usage](docs/usage.md) | Visitor and maintainer guide |
-| [Interface reference](docs/api.md) | DOM helper and contact form boundary |
+| [API reference](docs/api-reference.md) | Browser helper and absence of HTTP API |
+| [Interface summary](docs/api.md) | DOM helper and contact form boundary |
 | [Data and privacy](docs/database.md) | Current data handling and future requirements |
 | [Data flow](docs/data-flow.md) | Static assets, DOM, and form data |
 | [Modules](docs/modules.md) | Source responsibilities |
@@ -158,6 +165,7 @@ flowchart TD
 | [Troubleshooting](docs/troubleshooting.md) | Build and browser issues |
 | [Development](docs/development.md) | Coding standards and PR workflow |
 | [Diagrams](docs/diagrams/README.md) | Mermaid diagrams |
+| [Asset library](assets/README.md) | Asset organization and provenance rules |
 | [ADRs](docs/adr/README.md) | Architecture decisions |
 | [Runbooks](docs/runbooks/README.md) | Development and release procedures |
 
