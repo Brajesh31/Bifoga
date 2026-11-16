@@ -1,0 +1,6 @@
+flowchart LR
+    Visitor[External entity: visitor] -->|Page request| Website((Static website))
+    Website -->|HTML, CSS, JS, image assets| Visitor
+    Visitor -->|Navigation and tab actions| Website
+    Visitor -->|Form values| FormBoundary((Unimplemented form boundary))
+    FormBoundary -.->|No processing service in repository| Visitor
