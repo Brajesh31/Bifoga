@@ -1,0 +1,14 @@
+flowchart TD
+    Start([Start]) --> Open[Open EnClose landing page]
+    Open --> Read[Read introduction]
+    Read --> Select{Explore a service?}
+    Select -->|Consultation| Consult[View consultation panel]
+    Select -->|Education| Education[View education panel]
+    Consult --> Contact[Reach contact section]
+    Education --> Contact
+    Contact --> Form[See contact form]
+    Form --> Endpoint{Is a handler deployed?}
+    Endpoint -->|Current repository: no| Stop[No verified submission]
+    Endpoint -->|Future implementation| Submit[Submit and receive explicit response]
+    Stop --> End([End])
+    Submit --> End
