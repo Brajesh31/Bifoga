@@ -1,0 +1,14 @@
+flowchart TD
+    Visitor[Visitor]
+    Delivery((1.0 Static asset delivery))
+    Render((2.0 Browser rendering))
+    Interaction((3.0 Local DOM interaction))
+    Form((4.0 Contact form boundary))
+    Assets[(Version-controlled HTML, CSS, JS and images)]
+    Visitor -->|HTTPS request| Delivery
+    Assets --> Delivery
+    Delivery -->|Static files| Render
+    Visitor -->|Click or keyboard input| Interaction
+    Interaction -->|Temporary DOM visibility state| Render
+    Visitor -->|Form field values| Form
+    Form -.->|No handler exists| Missing[No verified storage or delivery]
