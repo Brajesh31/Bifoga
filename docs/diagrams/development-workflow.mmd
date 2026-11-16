@@ -1,0 +1,11 @@
+flowchart TD
+    A[Clone repository] --> B[npm ci]
+    B --> C[Edit HTML / CSS / JS]
+    C --> D{Styles changed?}
+    D -->|Yes| E[Run npm run tailwind]
+    D -->|No| F[Serve docs directory]
+    E --> F
+    F --> G[Check links, assets and interactions]
+    G --> H[Keyboard and responsive review]
+    H --> I[Review diff]
+    I --> J[Commit changes]
