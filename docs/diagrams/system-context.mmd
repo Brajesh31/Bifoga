@@ -1,0 +1,6 @@
+flowchart LR
+    Visitor[Visitor browser] -->|HTTPS request| StaticHost[Static hosting]
+    StaticHost -->|HTML CSS JS images| Browser[Browser rendering]
+    Browser -->|Local interaction| MainJS[main.js]
+    MainJS -->|DOM visibility/class changes| Browser
+    Contact[Contact form UI] -.->|No implemented handler in repository| Boundary[Unimplemented service boundary]
