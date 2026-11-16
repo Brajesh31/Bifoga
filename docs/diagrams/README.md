@@ -8,8 +8,11 @@ This directory stores editable Mermaid source diagrams. GitHub renders Mermaid i
 |---|---|---|
 | [system-context.mmd](system-context.mmd) | Context flow | Website boundary and visitor |
 | [asset-delivery.mmd](asset-delivery.mmd) | Sequence | Static asset request lifecycle |
+| [component-architecture.mmd](component-architecture.mmd) | Component view | Browser files and static delivery boundary |
 | [page-navigation.mmd](page-navigation.mmd) | Flowchart | Page sections and navigation |
 | [tab-state.mmd](tab-state.mmd) | State diagram | Intended service-panel state |
+| [visitor-activity.mmd](visitor-activity.mmd) | Activity flow | Visitor journey and contact limitation |
+| [contact-form-sequence.mmd](contact-form-sequence.mmd) | Sequence | Current form boundary and future handler |
 | [development-workflow.mmd](development-workflow.mmd) | Flowchart | Local edit, Tailwind and preview |
 | [deployment.mmd](deployment.mmd) | Flowchart | Static release and rollback |
 | [error-handling.mmd](error-handling.mmd) | Flowchart | Broken asset, panel and form boundaries |
