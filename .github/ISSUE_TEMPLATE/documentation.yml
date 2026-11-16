@@ -1,0 +1,23 @@
+name: "📚 Documentation request"
+description: Report inaccurate, missing, or confusing project documentation.
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: File or section
+      description: Link or path to the affected documentation.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is inaccurate or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested correction
+      description: Include implementation details or a source reference where useful.
