@@ -1,0 +1,15 @@
+flowchart TD
+    Start[Visitor opens page] --> Load{Assets loaded?}
+    Load -->|Yes| Render[Render content]
+    Load -->|No| Inspect[Inspect network errors and paths]
+    Inspect --> Fix[Correct path or hosting configuration]
+    Render --> Action{Visitor action}
+    Action -->|Navigation| Anchor{Target exists?}
+    Anchor -->|Yes| Navigate[Move to section]
+    Anchor -->|No| Report[Record broken navigation defect]
+    Action -->|Tab| Panel{Target panel exists?}
+    Panel -->|Yes| Show[Display panel]
+    Panel -->|No| Report
+    Action -->|Contact form| Endpoint{Handler exists?}
+    Endpoint -->|Current state: no| Warn[No verified submission]
+    Endpoint -->|Future state: yes| Service[Handle response and errors]
