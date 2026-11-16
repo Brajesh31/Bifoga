@@ -1,0 +1,9 @@
+flowchart TD
+    A[Visitor enters values] --> B[Static HTML form]
+    B --> C{Is a real endpoint configured?}
+    C -->|Current repository: no| D[No verified delivery]
+    C -->|Future: yes| E[HTTPS request]
+    E --> F[Server-side validation]
+    F --> G[Abuse protection]
+    G --> H[Process request]
+    H --> I[Return explicit success or error]
