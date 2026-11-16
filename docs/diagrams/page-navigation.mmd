@@ -1,0 +1,12 @@
+flowchart TD
+    Start([Visitor opens page]) --> Home[Home / introduction]
+    Home --> Nav{Choose navigation destination}
+    Nav --> Services[Services section]
+    Nav --> Booking[Booking-oriented destination]
+    Nav --> Contact[Contact section]
+    Services --> Tabs{Choose service panel}
+    Tabs --> Consultation[Consultation content]
+    Tabs --> Education[Education content]
+    Consultation --> Home
+    Education --> Home
+    Booking --> Contact
