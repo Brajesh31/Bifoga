@@ -1,21 +1,21 @@
-# ✨ Project overview
+# ✨ Project Overview
 
 ## 1. Purpose
 
-EnClose is a static landing-page concept for an AI consultation and education offering. It communicates a business-facing message about AI adoption, introduces Consultation and Education as two service categories, and presents a contact section.
+EnClose is a static landing-page concept for an AI consultation and education offering. It communicates a business-facing message about AI adoption, introduces Consultation and Education as service categories, and presents a contact section.
 
 The repository demonstrates the frontend presentation of that idea. It is not a complete AI consulting platform and does not implement AI inference, customer onboarding, payments, scheduling, or contact management.
 
-## 2. Goals visible in the current source
+## 2. Goals visible in the source
 
-- Present the EnClose brand using a logo and gradient treatment.
+- Present the EnClose brand using the existing logo and gradient treatment.
 - Explain why AI adoption is relevant to businesses and professionals.
 - Provide navigation to page sections.
 - Show two service categories using a tab-like interface.
 - Display a contact form layout.
 - Keep the page deployable as static files.
 
-## 3. Non-goals of the existing repository
+## 3. Non-goals of the current repository
 
 The current project does not include an AI assistant, model, inference endpoint, booking calendar, CRM, lead database, email notification service, user authentication, payment processing, content-management system, or contact-submission backend.
 
@@ -29,10 +29,10 @@ The intended audience is a business owner, professional, student, or organizatio
 
 | Layer | Current technology | Role |
 |---|---|---|
-| Markup | HTML5 | Page structure and form |
+| Markup | HTML5 | Page structure and form layout |
 | Styling | Tailwind CSS | Utilities and generated styles |
 | Layout helpers | W3.CSS | Existing layout classes |
-| Browser behaviour | Vanilla JavaScript | Service tab helper |
+| Browser behavior | Vanilla JavaScript | Service-panel helper |
 | Typography | Google Fonts | Inconsolata |
 | Development | Node.js and npm | Local scripts |
 | Delivery | Static hosting | Serve files in `docs/` |
