@@ -10,7 +10,7 @@
 
 **A static marketing website concept for AI consultation and education.**
 
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge) ![CI](https://github.com/Brajesh31/Bifoga/actions/workflows/ci.yml/badge.svg) ![Docs](https://github.com/Brajesh31/Bifoga/actions/workflows/documentation.yml/badge.svg) ![Security](https://github.com/Brajesh31/Bifoga/actions/workflows/security.yml/badge.svg) ![GitHub stars](https://img.shields.io/github/stars/Brajesh31/Bifoga?style=for-the-badge)
 
 </div>
 
@@ -164,6 +164,12 @@ flowchart TD
 | [FAQ](docs/faq.md) | Common questions |
 | [Troubleshooting](docs/troubleshooting.md) | Build and browser issues |
 | [Development](docs/development.md) | Coding standards and PR workflow |
+| [Coding standards](docs/coding-standards.md) | HTML, JavaScript, CSS, and documentation conventions |
+| [Privacy](docs/privacy.md) | Current collection boundary and future safeguards |
+| [Internationalization](docs/internationalization.md) | Localization planning |
+| [Observability](docs/observability.md) | Static-host monitoring and privacy |
+| [Maintenance](docs/maintenance.md) | Routine maintenance guidance |
+| [Technical debt](docs/technical-debt.md) | Verified implementation gaps |
 | [Diagrams](docs/diagrams/README.md) | Mermaid diagrams |
 | [Asset library](assets/README.md) | Asset organization and provenance rules |
 | [ADRs](docs/adr/README.md) | Architecture decisions |
