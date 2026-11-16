@@ -1,0 +1,48 @@
+name: "🐛 Bug report"
+description: Report a reproducible defect in the website or repository.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for helping improve Bifoga. Do not include passwords, tokens, or private visitor data."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior.
+      placeholder: A clear description of the defect.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide exact steps and the page/section involved.
+      placeholder: |
+        1. Open ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 157, Firefox ...
+  - type: input
+    id: viewport
+    attributes:
+      label: Viewport/device
+      placeholder: Desktop 1440px, mobile 390px ...
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or console output
+      description: Add only evidence that does not expose secrets or personal information.
