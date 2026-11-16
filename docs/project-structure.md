@@ -14,6 +14,7 @@ Bifoga/
 │   │   └── feature_request.yml
 │   ├── workflows/
 │   │   ├── ci.yml
+│   │   ├── documentation.yml
 │   │   ├── security.yml
 │   │   └── update-readme.yml
 │   └── PULL_REQUEST_TEMPLATE.md
@@ -29,27 +30,70 @@ Bifoga/
 │   │   └── 0003-accessible-interactions.md
 │   ├── diagrams/
 │   │   ├── README.md
-│   │   ├── system-context.mmd
-│   │   ├── page-navigation.mmd
-│   │   ├── form-boundary.mmd
 │   │   ├── asset-delivery.mmd
+│   │   ├── deployment.mmd
 │   │   ├── development-workflow.mmd
-│   │   └── future-service-integration.mmd
+│   │   ├── dfd-level-0.mmd
+│   │   ├── dfd-level-1.mmd
+│   │   ├── error-handling.mmd
+│   │   ├── form-boundary.mmd
+│   │   ├── future-service-integration.mmd
+│   │   ├── page-navigation.mmd
+│   │   ├── system-context.mmd
+│   │   ├── tab-state.mmd
+│   │   └── use-case.mmd
 │   ├── runbooks/
 │   │   ├── README.md
+│   │   ├── incident-response.md
 │   │   ├── local-preview.md
-│   │   ├── static-release.md
-│   │   └── incident-response.md
-│   ├── img/logo.png
+│   │   └── static-release.md
+│   ├── img/
+│   │   └── logo.png
+│   ├── accessibility.md
+│   ├── api-reference.md
+│   ├── api.md
+│   ├── architecture.md
+│   ├── coding-standards.md
+│   ├── components.md
+│   ├── configuration.md
+│   ├── data-flow.md
+│   ├── database.md
+│   ├── deployment.md
+│   ├── development.md
+│   ├── faq.md
+│   ├── features.md
+│   ├── future-scope.md
+│   ├── glossary.md
 │   ├── index.html
+│   ├── installation.md
+│   ├── internationalization.md
+│   ├── limitations.md
+│   ├── maintenance.md
+│   ├── modules.md
+│   ├── observability.md
+│   ├── performance.md
+│   ├── privacy.md
+│   ├── project-overview.md
+│   ├── project-structure.md
+│   ├── README.md
+│   ├── references.md
+│   ├── release-process.md
+│   ├── security.md
 │   ├── style.css
-│   └── *.md (project, engineering, quality and operational guides)
+│   ├── system-design.md
+│   ├── technical-debt.md
+│   ├── testing.md
+│   ├── troubleshooting.md
+│   ├── usage.md
+│   └── workflow.md
 ├── src/
 │   └── input.css
 ├── .editorconfig
 ├── .env.example
 ├── .gitattributes
 ├── .gitignore
+├── .idea/
+│   └── .gitignore
 ├── CHANGELOG.md
 ├── CITATION.cff
 ├── CODEOWNERS
@@ -63,8 +107,8 @@ Bifoga/
 ├── SECURITY.md
 ├── SUPPORT.md
 ├── main.js
-├── package.json
 ├── package-lock.json
+├── package.json
 └── tailwind.config.js
 ```
 
