@@ -1,47 +1,41 @@
-# ✨ Feature catalogue
+# ✨ Feature Catalogue
 
-This page separates visible page elements from complete working services. The current implementation is a static landing page, not an AI consultation platform.
+This catalogue separates visible page elements from complete working services. The current implementation is a static landing page, not a production AI consultation platform.
 
 ## 🧭 Navigation
 
-The top navigation contains Home, Services, Book a Call, and Contact Us. The first, second, and fourth links correspond to expected page sections. The `#book` navigation target does not currently have a matching section ID.
-
-**Recommended improvement:** add a real booking-information section or remove/retarget the link. Do not imply that calendar booking exists.
+The page contains navigation for Home, Services, Book a Call, and Contact Us. The `#book` destination does not currently have a matching section ID. Verify all anchors before treating the navigation as complete.
 
 ## 🎨 Hero and logo
 
-The hero uses a gradient background and a CSS class referencing the existing logo image. The logo is a background image, not a semantic inline image with alternative text.
-
-**Recommended improvement:** consider a semantic image with useful alt text when the logo conveys information needed to understand the page.
+The hero uses a gradient background and a CSS class that references the existing logo image. The logo is applied as a background image rather than a semantic inline image with alternative text.
 
 ## 💡 Introduction
 
-The introduction contains a headline about AI adoption and paragraphs describing the gap between businesses using AI and those that do not. This content is static.
+The introduction contains static messaging about AI adoption and the gap between businesses using AI and those that do not. Any quantitative or market claim in this copy should be supported by a reliable source before publication.
 
-**Recommended improvement:** proofread the copy, substantiate claims, and explain the actual outcomes that the proposed services provide.
+## 🧩 Consultation and Education panels
 
-## 🧩 Consultation and Education tabs
+The markup intends to show two service panels. The `openMenu(evt, menuName)` helper hides elements with class `menu`, shows a panel by ID, and attempts to update active tab styling.
 
-The markup intends to show two service panels. The JavaScript helper hides elements with class `menu`, shows the requested panel ID, and updates active styling.
-
-Current defects:
+Known issues in the current source:
 - Click handlers pass `Eat` and `Drinks`.
 - Content panel IDs are `consultation` and `education`.
-- The page links the JavaScript file as a stylesheet.
-- The helper loops over panel count when updating tab links.
-- Tab controls are anchors with JavaScript URLs rather than semantic buttons.
+- The HTML references the JavaScript file using a stylesheet link.
+- The helper uses panel count while iterating over tab links.
+- Controls should be reviewed for semantic button/tab behavior and keyboard access.
 
-No network call or service catalogue exists.
+No service API or dynamic service catalogue exists.
 
 ## 📬 Contact section
 
-The contact area includes Name, Company Name, and Message fields. Its form action is `/action_page.php`, but no PHP file or API route implementing that endpoint is in the repository.
+The contact area includes Name, Company Name, and Message fields. Its form action is `/action_page.php`, but no matching PHP file or API route is included.
 
-Before using an endpoint, add a privacy disclosure, appropriate consent language, server-side validation, spam prevention, access restrictions, retention/deletion rules, and secure transport.
+Before using a real endpoint, add privacy disclosure, appropriate consent language, server-side validation, spam prevention, access restrictions, retention/deletion rules, and secure transport.
 
 ## 🦶 Footer
 
-The footer element exists but is empty. A future footer could contain verified company identity, navigation, contact details, privacy policy, and legal notices. Do not invent company details.
+The footer element exists but is empty. A future footer may contain verified organization identity, navigation, contact information, privacy policy, and legal notices. Do not invent company details.
 
 ## 🚫 Not implemented
 
