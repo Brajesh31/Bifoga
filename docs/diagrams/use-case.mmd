@@ -1,0 +1,12 @@
+flowchart LR
+    Visitor((Visitor))
+    Maintainer((Maintainer))
+    Visitor --> A[Read project information]
+    Visitor --> B[Navigate page sections]
+    Visitor --> C[Explore service descriptions]
+    Visitor --> D[View contact form layout]
+    Maintainer --> E[Edit page content]
+    Maintainer --> F[Regenerate Tailwind CSS]
+    Maintainer --> G[Preview and verify site]
+    Maintainer --> H[Maintain documentation]
+    D -.-> I[Submission is not implemented]
