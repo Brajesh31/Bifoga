@@ -1,0 +1,60 @@
+name: 🧪 Static site checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: static-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate source and documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Validate JavaScript syntax
+        run: node --check main.js
+
+      - name: Validate package metadata
+        run: node -e "JSON.parse(require('node:fs').readFileSync('package.json', 'utf8')); JSON.parse(require('node:fs').readFileSync('package-lock.json', 'utf8'));"
+
+      - name: Verify core project files
+        run: |
+          test -f docs/index.html
+          test -f docs/style.css
+          test -f docs/img/logo.png
+          test -f src/input.css
+          test -f tailwind.config.js
+
+      - name: Verify documentation entry points
+        run: |
+          test -f docs/README.md
+          test -f docs/architecture.md
+          test -f docs/testing.md
+          test -f docs/security.md
+          test -f docs/accessibility.md
+          test -f docs/diagrams/README.md
+          test -f docs/adr/README.md
+          test -f docs/runbooks/README.md
+
+      - name: Check generated stylesheet workflow
+        run: npm run | grep -q "tailwind"
