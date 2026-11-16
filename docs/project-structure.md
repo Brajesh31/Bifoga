@@ -31,6 +31,8 @@ Bifoga/
 │   ├── diagrams/
 │   │   ├── README.md
 │   │   ├── asset-delivery.mmd
+│   │   ├── component-architecture.mmd
+│   │   ├── contact-form-sequence.mmd
 │   │   ├── deployment.mmd
 │   │   ├── development-workflow.mmd
 │   │   ├── dfd-level-0.mmd
