@@ -1,40 +1,65 @@
-# 🧩 System design
+# 🧩 System Design
 
-## Current design
+## 1. Current system
 
-The current website is a static presentation layer. It has no persistent application state, business service layer, or server-side data store. Browser interaction is limited to document navigation and a small service-tab function.
+EnClose is a static presentation layer. It has no persistent application state, business service layer, or server-side data store. Browser interaction is limited to document navigation and a small service-panel helper.
 
 ```mermaid
 flowchart LR
-    V[Visitor] --> H[HTML document]
-    H --> S[Compiled CSS]
-    H --> J[Vanilla JS]
-    H --> A[Logo asset]
-    S --> R[Rendered page]
-    J --> R
-    A --> R
-    R --> V
+    Visitor[Visitor] --> Host[Static web host]
+    Host --> HTML[HTML document]
+    Host --> CSS[Compiled CSS]
+    Host --> JS[Vanilla JavaScript]
+    Host --> Image[Logo asset]
+    HTML --> Browser[Browser rendering]
+    CSS --> Browser
+    JS --> Browser
+    Image --> Browser
+    Browser --> Visitor
 ```
 
-## Page state
+## 2. Trust boundaries
 
-The service helper changes panel visibility. It does not fetch service details or save a selection. Panel identity depends on HTML IDs and class names. The present markup and JavaScript disagree about the IDs passed to the function.
+| Boundary | Data/control | Trust consideration |
+|---|---|---|
+| Repository to static host | HTML, CSS, JS, image files | Review commits and deployment source |
+| Static host to browser | Public website assets | Serve over HTTPS and configure headers |
+| Browser interaction | DOM visibility and classes | Validate elements and preserve accessible state |
+| Contact form | Visitor-entered values | No verified processing endpoint exists |
 
-## Data storage
+## 3. State model
+
+The service helper changes element visibility in the current document. It does not fetch service details, save a selection, or persist state across visits. Panel identity depends on HTML IDs and class names. Existing markup and JavaScript have mismatches that are recorded in the project README and troubleshooting guide.
+
+## 4. Data storage
 
 There is no database. The contact form is not connected to a local or remote processing component. No submission storage, email notification, audit, or retention mechanism exists in this project.
 
-## Configuration
+## 5. Configuration and dependencies
 
-Development scripts are configured in `package.json`. Tailwind scans the configured HTML files, reads `src/input.css`, and emits `docs/style.css`. The browser also loads remote W3.CSS and Google Fonts resources.
+Development scripts are configured in `package.json`. Tailwind scans configured HTML files, reads `src/input.css`, and emits `docs/style.css`. The browser also loads external W3.CSS and Google Fonts resources.
 
-## Proposed production design
+## 6. Proposed contact service architecture
 
-A future implementation that accepts contact enquiries should keep the static presentation layer separate from the contact API. The server must validate every field independently, reject spam, limit request rates, store only necessary information, protect access to submissions, and apply a published retention schedule.
+If contact processing becomes a real requirement, keep the static presentation separate from the service boundary. The future service should validate fields server-side, apply rate limits and spam controls, store only necessary information, restrict access to submissions, and enforce a published retention schedule.
 
-## Design principles
+```mermaid
+flowchart TD
+    Form[Browser form] -->|HTTPS| API[Future endpoint]
+    API --> Validation[Server-side validation]
+    Validation --> Abuse[Abuse controls]
+    Abuse --> Process[Approved processing]
+    Process --> Response[Explicit result]
+    Response --> Form
+    Secrets[Server-side secrets] --> API
+    Store[(Optional data store)] -.-> Process
+```
 
-1. **Honest functionality:** copy must not imply features that are not implemented.
+This future design is not implemented in the current repository.
+
+## 7. Design principles
+
+1. **Honest functionality:** public copy must not imply features that are not implemented.
 2. **Accessibility:** navigation and tabs must work without a mouse.
 3. **Privacy:** do not collect unnecessary personal or business information.
 4. **Defence in depth:** browser validation is not a security boundary.
