@@ -1,61 +1,76 @@
 # 📚 EnClose documentation hub
 
-This folder documents the current EnClose static landing page, its source files, browser interactions, development process, and the work needed before production use.
+Welcome to the technical documentation for **EnClose**, the static AI consultation and education landing-page concept in the Bifoga repository.
 
-> **Implementation boundary:** this repository contains browser-side HTML, CSS, and JavaScript only. No AI model, CRM, appointment service, contact endpoint, database, or backend API is included.
+> [!IMPORTANT]
+> This repository currently provides a static browser experience. It does not include an AI inference service, booking engine, CRM, application API, database, authentication, or contact-form handler. Future designs in these documents are labelled as proposals, not shipped capabilities.
 
-## 🧭 Reading paths
+## 🧭 Choose a reading path
 
-**New reader:** [Overview](project-overview.md) → [Features](features.md) → [Usage](usage.md) → [Limitations](limitations.md).
+- **Understand the project:** [Overview](project-overview.md) → [Features](features.md) → [Limitations](limitations.md) → [Future scope](future-scope.md).
+- **Start developing:** [Installation](installation.md) → [Configuration](configuration.md) → [Project structure](project-structure.md) → [Development](development.md) → [Testing](testing.md).
+- **Understand engineering:** [Architecture](architecture.md) → [System design](system-design.md) → [Data flow](data-flow.md) → [Modules](modules.md) → [Components](components.md) → [Diagrams](diagrams/README.md).
+- **Prepare a release:** [Security](security.md) → [Accessibility](accessibility.md) → [Performance](performance.md) → [Deployment](deployment.md) → [Release process](release-process.md) → [Runbooks](runbooks/README.md).
 
-**Frontend developer:** [Installation](installation.md) → [Project structure](project-structure.md) → [Architecture](architecture.md) → [Configuration](configuration.md) → [Development](development.md) → [Testing](testing.md).
+## 📖 Complete documentation catalogue
 
-**Release reviewer:** [Security](security.md) → [Accessibility](accessibility.md) → [Deployment](deployment.md) → [Performance](performance.md) → [Runbooks](runbooks/README.md).
-
-## 📖 Documentation catalogue
-
-| Topic | Guide | Purpose |
+| Area | Document | Coverage |
 |---|---|---|
-| Product | [Project overview](project-overview.md) | Goals, audience, scope, non-goals |
-| Architecture | [Architecture](architecture.md) | Browser runtime and source relationships |
-| Architecture | [System design](system-design.md) | Current and proposed architecture |
-| Repository | [Project structure](project-structure.md) | File responsibilities |
-| Runtime | [Workflow](workflow.md) | Page loading, navigation, tabs, contact flow |
-| Features | [Features](features.md) | Existing page capabilities |
-| Setup | [Installation](installation.md) | npm and local preview |
-| Setup | [Configuration](configuration.md) | Tailwind and resource paths |
-| Usage | [Usage](usage.md) | Visitor and developer guide |
-| Interface | [API reference](api.md) | DOM function and form boundary |
-| Privacy | [Data and privacy](database.md) | No persistence today, future requirements |
-| Privacy | [Data flow](data-flow.md) | Assets, DOM, possible form data |
-| Code | [Modules](modules.md) | Logical source responsibilities |
-| UI | [Components](components.md) | Page sections and component inventory |
-| Quality | [Testing](testing.md) | Verification checklist |
-| Operations | [Deployment](deployment.md) | Static hosting practices |
-| Security | [Security](security.md) | Risks and controls |
-| Inclusion | [Accessibility](accessibility.md) | Semantics, keyboard, focus, forms |
-| Quality | [Performance](performance.md) | CSS, images, fonts, remote resources |
-| Quality | [Limitations](limitations.md) | Existing defects and missing capabilities |
-| Planning | [Future scope](future-scope.md) | Prioritized next steps |
+| Product | [Project overview](project-overview.md) | Purpose, audience, goals and non-goals |
+| Product | [Features](features.md) | Current page capabilities and boundaries |
+| Product | [Usage](usage.md) | Visitor and maintainer usage |
+| Product | [Limitations](limitations.md) | Missing and incomplete capabilities |
+| Planning | [Future scope](future-scope.md) | Prioritized potential improvements |
+| Architecture | [Architecture](architecture.md) | Static runtime and source relationships |
+| Architecture | [System design](system-design.md) | Current architecture and evolution |
+| Architecture | [Data flow](data-flow.md) | Browser, assets and form boundary |
+| Architecture | [Modules](modules.md) | Source-file responsibilities |
+| Architecture | [Components](components.md) | Page regions and interaction patterns |
+| Architecture | [Diagrams](diagrams/README.md) | Editable Mermaid sources |
+| Repository | [Project structure](project-structure.md) | Directory and file responsibilities |
+| Setup | [Installation](installation.md) | Node.js, npm and local preview |
+| Setup | [Configuration](configuration.md) | Tailwind and environment boundaries |
+| Development | [Development](development.md) | Editing and contribution workflow |
+| Development | [Testing](testing.md) | Manual checks and CI baseline |
+| Development | [API reference](api-reference.md) | Browser helper and absence of HTTP API |
+| Development | [Legacy interface notes](api.md) | Short interface summary |
+| Data | [Database and persistence](database.md) | No current database; future safeguards |
+| Operations | [Deployment](deployment.md) | Static hosting guidance |
+| Operations | [Release process](release-process.md) | Release preparation and rollback |
+| Operations | [Runbooks](runbooks/README.md) | Local preview, release and incident response |
+| Security | [Security](security.md) | Threat boundaries and controls |
+| Accessibility | [Accessibility](accessibility.md) | Semantic markup and keyboard behavior |
+| Performance | [Performance](performance.md) | Asset, CSS and runtime considerations |
+| Support | [Troubleshooting](troubleshooting.md) | Common development issues |
+| Support | [FAQ](faq.md) | Frequently asked questions |
 | Reference | [Glossary](glossary.md) | Project terminology |
-| Reference | [References](references.md) | Official technology documentation |
-| Reference | [FAQ](faq.md) | Common questions |
-| Support | [Troubleshooting](troubleshooting.md) | Preview and interaction problems |
-| Engineering | [Development](development.md) | Code quality and PR process |
-| Visual | [Diagrams](diagrams/README.md) | Editable Mermaid diagrams |
-| Decisions | [ADRs](adr/README.md) | Design decision history |
-| Operations | [Runbooks](runbooks/README.md) | Local development and release procedures |
+| Reference | [References](references.md) | Official technical resources |
+| Governance | [Architecture decisions](adr/README.md) | Decision records |
+ 
+## 🔎 Verified implementation inventory
 
-## ✅ Current implementation facts
+| Path | Role |
+|---|---|
+| `docs/index.html` | Main static page |
+| `docs/style.css` | Served stylesheet output |
+| `src/input.css` | Tailwind/CSS source entry point |
+| `main.js` | Browser-side menu helper |
+| `docs/img/logo.png` | Existing project logo |
+| `tailwind.config.js` | Tailwind content configuration |
+| `package.json` / `package-lock.json` | npm scripts and dependency lock |
+| `.github/workflows/` | Existing README automation plus repository checks |
 
-- Main page markup: `docs/index.html`.
-- Compiled stylesheet: `docs/style.css`.
-- Tailwind input: `src/input.css`.
-- Tab helper: `main.js`.
-- Site logo: `docs/img/logo.png`.
-- Contact form action: `/action_page.php`, not implemented in this repository.
-- No API server or persistent data store is included.
+## 🧱 Diagram conventions
 
-## 📌 Documentation maintenance rule
+Mermaid files in [diagrams/](diagrams/README.md) are editable source. The current-state diagrams describe the static website. Any diagram that includes a future API, database, AI service, or form processor is explicitly marked as proposed.
 
-When markup, styling, JavaScript, assets, or build commands change, update the corresponding guides and Mermaid diagrams. Keep implemented behaviour separate from plans and recommendations.
+## 🛠️ Keeping documentation accurate
+
+When changing HTML, CSS, JavaScript, package scripts, assets, or hosting configuration:
+1. Update the relevant guide and source inventory.
+2. Update affected diagrams.
+3. Verify all file paths and commands against the repository.
+4. Run the available CI checks.
+5. Separate shipped behavior from proposals and known gaps.
+
+Do not add empty directories, fake screenshots, invented metrics, or API/database documentation that implies nonexistent systems.
