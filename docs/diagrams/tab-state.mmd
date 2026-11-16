@@ -1,0 +1,11 @@
+stateDiagram-v2
+    [*] --> Consultation
+    Consultation --> Education: Activate Education control
+    Education --> Consultation: Activate Consultation control
+    Consultation --> [*]: Leave service section
+    Education --> [*]: Leave service section
+    note right of Consultation
+      Intended UI state only.
+      Verify accessible selected state
+      and matching panel identifiers.
+    end note
